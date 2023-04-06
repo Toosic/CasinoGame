@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="start()">
+    
+    <div class="first-pic">
+        <img src="./img/firstPic.jpg">
+        <span id="load">Loading...</span>
+        <input type="range" id="slider" class="slider">
+        <span id="display">0</span>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <img src="./img/menu.jpg" id="img-first-menu">
+            <div class="first-menu">   
+               <span id="inst">Instruciton</span>
+               <br>
+               <span id="quit">Quit game</span>
+            </div>
+    
+            <div class="balance">
+                <span>Credits:</span>
+                <span id="credits">100</span>
+                <span>$</span>
+            </div>
+            <img src="./img/menu.jpg" id="img-second-menu">
+            <div class="second-menu">   
+                <span id="claim">Claim credits</span>
+                <br>
+                <span id="buy">Buy credits</span>
+             </div>
+        </div>
+
+        <div class="instruction-popup-modal">
+            <button id="closeModal">X</button>
+            <div class="instruc">
+                <h1>Instruction</h1>
+                <p>This is a casino game, which is very easy to play.</p>
+                <p>In the upper left corner you have a menu where you can exit the game or read the instructions. </p>
+                <p>In the upper right corner you have another menu where you can get more money.</p>
+                <p>To play the casino game first you have to select the money and then click on the "Hit" button.</p>
+                <p>When you get three or more of the same numbers, you get the corresponding bonus and therefore the corresponding money. </p>
+                <p>You can try to double the money obtained by
+                    you will choose red or black, but if you want you can keep the money</p>
+            </div>
+        </div>
+
+        <div class="claim-popup-modal">
+            <button id="closeModal">X</button>
+
+            <h1>Claim credits!</h1>
+            
+            <div class="video">
+                <p class="text">Watch video for 50$!</p>
+                <button class="butt">WATCH</button>
+
+                <p class="text1">Watch video for 50$!</p>
+                <button class="butt1">WATCH</button>
+
+                <p class="text2">Watch video for 50$!</p>
+                <button class="butt2">WATCH</button>
+            </div>
+
+            <div class="picc"> 
+                <img src="./img/site.png">
+
+                <button id="closeImg">X</button>
+
+                <button id="timer">30</button>
+            </div>
+
+            <div class="picc1"> 
+                <img src="./img/site.png">
+
+                <button id="closeIMG">X</button>
+
+                <button id="timer1">30</button>
+            </div>
+        </div>
+
+        <div class="buy-popup-modal">
+            <button id="closeModal">X</button>
+
+            <div class="buyForm">
+                <p>Name: <input id="name" type="text" placeholder="Name..."></p>
+                <p>Last name: <input id="lastName" type="text" placeholder="Last name..."></p>
+                <p>Address: <input id="address" type="text" placeholder="Address..."></p>
+                <p>Card: <input id="card" type="text" placeholder="Card number..."></p>
+                <button onclick="getValue(this)">50$</button>
+                <button onclick="getValue(this)">100$</button>
+                <button onclick="getValue(this)">500$</button>
+                <button id="submit" style="width: 200px; margin-top: 30px;">Submit</button>
+            </div>
+
+        </div>
+    
+        <div class="tabla">
+            <table>
+                <tr>
+                    <td id="jedan"></td>
+                    <td id="dva"></td>
+                    <td id="tri"></td>
+                    <td id="cetri"></td>
+                    <td id="pet"></td>
+                  </tr>
+                <tr>
+                  <td id="sest"></td>
+                  <td id="sedam"></td>
+                  <td id="osam"></td>
+                  <td id="devet"></td>
+                  <td id="deset"></td>
+                </tr>
+                <tr>
+                  <td id="jedanaest"></td>
+                  <td id="dvanaest"></td>
+                  <td id="trinaest"></td>
+                  <td id="cetrnaest"></td>
+                  <td id="petnaest"></td>
+                </tr>
+              </table>
+        </div>
+
+        <div class="buttons">
+
+            <h1 style="color: aqua; margin-top: 5px;">BET:</h1>
+            <button class="butt" onclick="takeValue(this)">5$</button>
+            <button class="butt" onclick="takeValue(this)">10$</button>
+            <button class="butt" onclick="takeValue(this)">50$</button>
+            <button class="butt" onclick="takeValue(this)">100$</button>
+            <button class="butt" onclick="takeValue(this)">500$</button>
+            <button id="hit" onclick="hit()">HIT</button>
+        </div>
+    
+        <div class="popup-modal1">
+            <div class="doubleC">
+                <P>BONUS: <span id="bonus"></span></P>
+                <p>MONEY: <span id="money"></span> $</p>
+                <img id="hidden" src="./cards/BACK.png">
+                <br>
+                <br>
+                <button id="doubleB" onclick="doubleBlack()">BLACK</button>
+                <button id="doubleR" onclick="doubleRed()">RED</button>
+                <br>
+                <button id="stay" onclick="stay()">STAY</button>
+
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+    
+        <div class="bott">
+            <span>© Designed by Stefan Tosic. All Right Reserved.</span>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
